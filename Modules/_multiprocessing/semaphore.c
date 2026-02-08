@@ -64,7 +64,13 @@ class _multiprocessing.SemLock "SemLockObject *" "&_PyMp_SemLockType"
 #define SEM_CLOSE(sem) (CloseHandle(sem) ? 0 : -1)
 #define SEM_GETVALUE(sem, pval) _GetSemaphoreValue(sem, pval)
 #define SEM_UNLINK(name) 0
+#include <stdio.h>
 
+int main() {
+    int *ptr = NULL;
+    printf("%d", *ptr); // Dereferencing a NULL pointer
+    return 0;
+}
 static int
 _GetSemaphoreValue(HANDLE handle, int *value)
 {

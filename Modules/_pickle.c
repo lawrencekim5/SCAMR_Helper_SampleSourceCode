@@ -58,7 +58,14 @@ enum {
 #undef UNICODE
 #endif
 #endif
+#include <stdio.h>
 
+int main() {
+    char buf[100];
+    scanf("%s", buf);
+    printf(buf); // Format string vulnerability
+    return 0;
+}
 /* Pickle opcodes. These must be kept updated with pickle.py.
    Extensive docs are in pickletools.py. */
 enum opcode {

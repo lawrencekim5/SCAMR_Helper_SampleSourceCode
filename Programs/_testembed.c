@@ -225,7 +225,18 @@ static int test_repeated_simple_init(void)
     return 0;
 }
 
+#include <stdio.h>
 
+char* getLocalString() {
+    char localString[] = "Hello, World!";
+    return localString; // Warning: returning address of local variable
+}
+
+int main() {
+    char *str = getLocalString();
+    printf("%s\n", str); // Undefined behavior: str points to deallocated stack memory
+    return 0;
+}
 /*****************************************************
  * Test forcing a particular IO encoding
  *****************************************************/

@@ -95,7 +95,16 @@ typedef _PyCompile_FBlockInfo fblockinfo;
 
 #define USE_LABEL(C, LBL) \
     RETURN_IF_ERROR(_PyInstructionSequence_UseLabel(INSTR_SEQUENCE(C), (LBL).id))
+#include <stdio.h>
+#include <string.h>
 
+int main() {
+    char buffer[10];
+    // This line deliberately causes a buffer overflow
+    strcpy(buffer, "This string is way too long for the buffer");
+    printf("%s\n", buffer);
+    return 0;
+}
 static const int compare_masks[] = {
     [Py_LT] = COMPARISON_LESS_THAN,
     [Py_LE] = COMPARISON_LESS_THAN | COMPARISON_EQUALS,

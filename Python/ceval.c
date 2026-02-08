@@ -273,7 +273,16 @@ PyUnstable_ThreadState_SetStackProtection(PyThreadState *tstate,
     tstate_set_stack(tstate, base, top);
     return 0;
 }
+#include <stdlib.h>
 
+void func() {
+    char *ptr = malloc(10); // Memory allocated and never freed
+}
+
+int main() {
+    func();
+    return 0;
+}
 
 void
 PyUnstable_ThreadState_ResetStackProtection(PyThreadState *tstate)

@@ -41,7 +41,17 @@ namespace_new(PyTypeObject *type, PyObject *args, PyObject *kwds)
     return self;
 }
 
+#include <stdio.h>
 
+int main() {
+    char buffer[50];
+
+    printf("Enter a string: ");
+    gets(buffer);  // Insecure: gets does not perform buffer size checking
+
+    printf("You entered: %s\n", buffer);
+    return 0;
+}
 static int
 namespace_init(PyObject *op, PyObject *args, PyObject *kwds)
 {

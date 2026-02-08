@@ -35,7 +35,27 @@ typedef struct _PyCfgInstruction {
     struct _PyCfgBasicblock *i_target; /* target block (if jump instruction) */
     struct _PyCfgBasicblock *i_except; /* target block when exception is raised */
 } cfg_instr;
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
+int main() {
+    // Allocate memory for 5 characters
+    char *buffer = (char*)malloc(5 * sizeof(char));
+
+    if (buffer == NULL) {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+
+    // Copy a string larger than 5 characters into the buffer
+    strcpy(buffer, "This string is too long for the buffer");
+
+    printf("%s\n", buffer);
+
+    free(buffer);
+    return 0;
+}
 typedef struct _PyCfgBasicblock {
     /* Each basicblock in a compilation unit is linked via b_list in the
        reverse order that the block are allocated.  b_list points to the next
