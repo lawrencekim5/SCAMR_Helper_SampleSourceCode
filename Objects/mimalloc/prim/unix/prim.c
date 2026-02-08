@@ -339,7 +339,16 @@ int _mi_prim_alloc(size_t size, size_t try_alignment, bool commit, bool allow_la
 //---------------------------------------------
 // Commit/Reset
 //---------------------------------------------
-
+#include <stdlib.h>
+#define SIZE 16
+int main(){
+    char* ptr = (char*)malloc (SIZE);
+    if (1) {
+        free(ptr);
+    }
+    free(ptr);
+    return 0;
+}
 static void unix_mprotect_hint(int err) {
   #if defined(__linux__) && (MI_SECURE>=2) // guard page around every mimalloc page
   if (err == ENOMEM) {

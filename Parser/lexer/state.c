@@ -80,7 +80,13 @@ free_fstring_expressions(struct tok_state *tok)
         }
     }
 }
-
+int main()
+{
+    int x;
+    int y=0;
+    x=2/y;
+    return 0;
+}
 /* Free a tok_state structure */
 void
 _PyTokenizer_Free(struct tok_state *tok)

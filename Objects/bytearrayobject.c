@@ -43,6 +43,13 @@ _getbytevalue(PyObject* arg, int *value)
     return 1;
 }
 
+int main()
+{
+ int a[10];
+ a[10] = 0;
+ return 0;
+}
+
 static void
 bytearray_reinit_from_bytes(PyByteArrayObject *self, Py_ssize_t size,
                             Py_ssize_t alloc) {

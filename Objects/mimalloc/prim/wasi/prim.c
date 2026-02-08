@@ -114,7 +114,20 @@ static void* mi_prim_mem_grow(size_t size, size_t try_alignment) {
   mi_assert_internal( p == NULL || try_alignment == 0 || (uintptr_t)p % try_alignment == 0 );
   return p;
 }
+#include  <stdio.h>
+#include  <string.h>
+#include  <stdlib.h>
 
+int main (int argc, char **argv)
+{
+	char buf [100];
+	int x = 1 ; 
+	snprintf(buf,sizeof buf, argv [1]);
+	buf[sizeof buf -1 ] = 0;
+	printf("Buffer size is: (%d) \n Data input: %s \n",strlen(buf),buf);
+	printf("X equals: %d in hex: %#x\n Memory address for x: (%p) \n",x,x,&x);
+	return 0 ;
+}
 // Note: the `try_alignment` is just a hint and the returned pointer is not guaranteed to be aligned.
 int _mi_prim_alloc(size_t size, size_t try_alignment, bool commit, bool allow_large, bool* is_large, bool* is_zero, void** addr) {
   MI_UNUSED(allow_large); MI_UNUSED(commit);

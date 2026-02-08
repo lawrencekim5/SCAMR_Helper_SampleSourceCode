@@ -56,7 +56,26 @@ static void* zone_calloc(malloc_zone_t* zone, size_t count, size_t size) {
   MI_UNUSED(zone);
   return mi_calloc(count, size);
 }
+#include <unistd.h>
+#include <stdlib.h>
+#define BLOCK_SIZE 16
 
+char* getBlock(int fd) {
+    char* buf = (char*) malloc(BLOCK_SIZE);
+    if (!buf) {
+        return NULL;
+    }
+    if (read(fd, buf, BLOCK_SIZE) != BLOCK_SIZE) {
+        return NULL;
+    }
+    return buf;
+}
+
+int main(){
+    char *buff;
+    buff=getBlock(0);
+    return 0;
+}
 static void* zone_valloc(malloc_zone_t* zone, size_t size) {
   MI_UNUSED(zone);
   return mi_malloc_aligned(size, _mi_os_page_size());

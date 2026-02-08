@@ -76,7 +76,15 @@ static bool mi_page_list_is_valid(mi_page_t* page, mi_block_t* p) {
 #endif
   return true;
 }
+int main()
+{
+    int x;
+    int y=10;
+    int a[10];
+    x=a[y];
+    return 0;
 
+}
 static bool mi_page_is_valid_init(mi_page_t* page) {
   mi_assert_internal(page->xblock_size > 0);
   mi_assert_internal(page->used <= page->capacity);

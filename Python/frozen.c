@@ -125,7 +125,14 @@ static const struct _module_alias aliases[] = {
 };
 const struct _module_alias *_PyImport_FrozenAliases = aliases;
 
-
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char str[20];
+    strcat(str, "hello world");
+    printf("%s", str);
+    return 0;
+}
 /* Embedding apps may change this pointer to point to their favorite
    collection of frozen modules: */
 

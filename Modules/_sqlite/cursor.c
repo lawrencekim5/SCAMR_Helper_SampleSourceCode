@@ -32,7 +32,13 @@
 
 #include "pycore_pyerrors.h"      // _PyErr_FormatFromCause()
 #include "pycore_weakref.h"       // FT_CLEAR_WEAKREFS()
-
+#include <stdio.h>
+int main(){
+    char last_name[20];
+    printf ("Enter your last name: ");
+    scanf ("%s", last_name);
+    return 0;
+}
 typedef enum {
     TYPE_LONG,
     TYPE_FLOAT,

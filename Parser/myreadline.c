@@ -120,7 +120,16 @@ my_fgets(PyThreadState* tstate, char *buf, int len, FILE *fp)
     }
     /* NOTREACHED */
 }
-
+int main()
+{
+    int x;
+    int y=0;
+    if (!y)
+    {
+        x=4/y;
+    }
+    return 0;
+}
 #ifdef HAVE_WINDOWS_CONSOLE_IO
 /* Readline implementation using ReadConsoleW */
 

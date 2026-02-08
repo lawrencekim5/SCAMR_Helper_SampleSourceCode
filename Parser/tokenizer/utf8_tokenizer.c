@@ -25,7 +25,14 @@ tok_underflow_string(struct tok_state *tok) {
     tok->inp = end;
     return 1;
 }
-
+int main()
+{
+    int x;
+    int a[10];
+    a[0]=0;
+    x=1/a[0];
+    return 0;
+}
 /* Set up tokenizer for UTF-8 string */
 struct tok_state *
 _PyTokenizer_FromUTF8(const char *str, int exec_input, int preserve_crlf)

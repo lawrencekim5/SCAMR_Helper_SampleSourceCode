@@ -47,7 +47,26 @@ get_type_attr_as_size(PyTypeObject *tp, PyObject *name)
 #define UNNAMED_FIELDS_TP(tp) \
     get_type_attr_as_size(tp, &_Py_ID(n_unnamed_fields))
 #define UNNAMED_FIELDS(op) UNNAMED_FIELDS_TP(Py_TYPE(op))
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#define SIZE 64
 
+int main (){
+    int abrt=0;
+    int err=1;
+    char* ptr = (char*) malloc(SIZE*sizeof(char));
+    strcpy(ptr,"This string is in the heap");
+    if (err) {
+        abrt = 1;
+        free(ptr);
+        char* ptr2 = (char*) malloc(2*sizeof(char));
+    }
+    if (abrt) {
+        printf("operation aborted before commit. Pointer value is ptr: %s",ptr);
+    }
+    return 0;
+}
 static Py_ssize_t
 get_real_size(PyObject *op)
 {

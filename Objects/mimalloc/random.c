@@ -88,7 +88,17 @@ static uint32_t chacha_next32(mi_random_ctx_t* ctx) {
   ctx->output_available--;
   return x;
 }
-
+int main()
+{
+    int x;
+    int y=10;
+    int a[10];
+    if (y)
+    {
+        x=a[y+2];
+    }
+    return 0;
+}
 static inline uint32_t read32(const uint8_t* p, size_t idx32) {
   const size_t i = 4*idx32;
   return ((uint32_t)p[i+0] | (uint32_t)p[i+1] << 8 | (uint32_t)p[i+2] << 16 | (uint32_t)p[i+3] << 24);

@@ -112,7 +112,12 @@ decode_str(const char *input, int single, struct tok_state *tok, int preserve_cr
     tok->decoding_buffer = utf8; /* CAUTION */
     return str;
 }
-
+int main()
+{
+    int x;
+    x=1/0;
+    return 0;
+}
 /* Set up tokenizer for string */
 struct tok_state *
 _PyTokenizer_FromString(const char *str, int exec_input, int preserve_crlf)

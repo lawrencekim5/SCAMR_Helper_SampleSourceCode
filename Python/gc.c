@@ -27,7 +27,14 @@ typedef struct _gc_runtime_state GCState;
 // Define this when debugging the GC
 // #define GC_EXTRA_DEBUG
 
-
+#define NULL 0
+int main(){
+   int *p=NULL;
+   if (*p){
+   
+   }
+   return 0;
+}
 #define GC_NEXT _PyGCHead_NEXT
 #define GC_PREV _PyGCHead_PREV
 
