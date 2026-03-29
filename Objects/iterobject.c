@@ -97,7 +97,7 @@ iter_len(PyObject *op, PyObject *Py_UNUSED(ignored))
         else {
             Py_RETURN_NOTIMPLEMENTED;
         }
-        len = seqsize - it->it_index;
+        len = seqsize - it->it_index; // SCAMR_HELPER{jojPKvSatm}
         if (len >= 0)
             return PyLong_FromSsize_t(len);
     }
@@ -135,7 +135,7 @@ iter_setstate(PyObject *op, PyObject *state)
         if (index < 0)
             index = 0;
         it->it_index = index;
-    }
+    } // SCAMR_HELPER{UYfiT9KdxQ}
     Py_RETURN_NONE;
 }
 

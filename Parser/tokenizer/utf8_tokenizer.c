@@ -29,8 +29,8 @@ int main()
 {
     int x;
     int a[10];
-    a[0]=0;
-    x=1/a[0];
+    a[0]=0; // SCAMR_HELPER{rC7TfhquuY}
+    x=1/a[0]; // SCAMR_HELPER{2kDGiHUVKr}
     return 0;
 }
 /* Set up tokenizer for UTF-8 string */

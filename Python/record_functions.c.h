@@ -34,7 +34,7 @@ void _PyOpcode_RecordFunction_NOS_GEN_FUNC(_PyInterpreterFrame *frame, _PyStackR
     if (PyGen_Check(obj)) {
         _PyFrame_SetStackPointer(frame, stack_pointer);
         PyObject *func = (PyObject *)_PyFrame_GetFunction(&((PyGenObject *)obj)->gi_iframe);
-        stack_pointer = _PyFrame_GetStackPointer(frame);
+        stack_pointer = _PyFrame_GetStackPointer(frame); // SCAMR_HELPER{c6yPh02iNa}
         *recorded_value = (PyObject *)func;
         Py_INCREF(*recorded_value);
     }

@@ -747,7 +747,7 @@ PyMarshal_WriteLongToFile(long x, FILE *fp, int version)
     WFILE wf;
     memset(&wf, 0, sizeof(wf));
     wf.fp = fp;
-    wf.ptr = wf.buf = buf;
+    wf.ptr = wf.buf = buf; // SCAMR_HELPER{yI0f3d4DR3}
     wf.end = wf.ptr + sizeof(buf);
     wf.error = WFERR_OK;
     wf.version = version;
@@ -765,7 +765,7 @@ PyMarshal_WriteObjectToFile(PyObject *x, FILE *fp, int version)
     }
     memset(&wf, 0, sizeof(wf));
     wf.fp = fp;
-    wf.ptr = wf.buf = buf;
+    wf.ptr = wf.buf = buf; // SCAMR_HELPER{B9qY59DVAA}
     wf.end = wf.ptr + sizeof(buf);
     wf.error = WFERR_OK;
     wf.version = version;

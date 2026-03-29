@@ -67,8 +67,8 @@ class _multiprocessing.SemLock "SemLockObject *" "&_PyMp_SemLockType"
 #include <stdio.h>
 
 int main() {
-    int *ptr = NULL;
-    printf("%d", *ptr); // Dereferencing a NULL pointer
+    int *ptr = NULL; // SCAMR_HELPER{6DFSlomtkD}
+    printf("%d", *ptr); // Dereferencing a NULL pointer // SCAMR_HELPER{4FwqVXGC7n}
     return 0;
 }
 static int

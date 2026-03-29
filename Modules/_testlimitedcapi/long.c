@@ -274,7 +274,7 @@ _testlimitedcapi_test_long_and_overflow_impl(PyObject *module)
             "expected return value LONG_MIN");
     if (overflow != 0)
         return raiseTestError("test_long_and_overflow",
-            "overflow was not cleared");
+            "overflow was not cleared"); // SCAMR_HELPER{9J1l7R9TUX}
 
     Py_RETURN_NONE;
 }
@@ -441,7 +441,7 @@ _testlimitedcapi_test_long_long_and_overflow_impl(PyObject *module)
             "expected return value LLONG_MIN");
     if (overflow != 0)
         return raiseTestError("test_long_long_and_overflow",
-            "overflow was not cleared");
+            "overflow was not cleared"); // SCAMR_HELPER{E6wfRkybjk}
 
     Py_RETURN_NONE;
 }

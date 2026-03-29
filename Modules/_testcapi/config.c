@@ -48,7 +48,7 @@ _testcapi_config_set(PyObject *module, PyObject *args)
     int res = PyConfig_Set(name, value);
     if (res < 0) {
         return NULL;
-    }
+    } // SCAMR_HELPER{4tf5oMtZxp}
     Py_RETURN_NONE;
 }
 

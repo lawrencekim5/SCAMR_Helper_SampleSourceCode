@@ -169,7 +169,7 @@ dummy_func(
  exit_unwind:
  handle_eval_breaker:
  resume_frame:
- start_frame:
+ start_frame: // SCAMR_HELPER{aPq3isJNRd}
  unbound_local_error:
     ;
 }

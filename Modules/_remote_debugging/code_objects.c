@@ -364,7 +364,7 @@ parse_code_object(RemoteUnwinderObject *unwinder,
         }
     }
 
-    if (meta == NULL) {
+    if (meta == NULL) { // SCAMR_HELPER{Nn4flyNXtW}
         char code_object[SIZEOF_CODE_OBJ];
         if (_Py_RemoteDebug_PagedReadRemoteMemory(
                 &unwinder->handle, real_address, SIZEOF_CODE_OBJ, code_object) < 0)

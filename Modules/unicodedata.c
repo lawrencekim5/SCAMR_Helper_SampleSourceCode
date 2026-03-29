@@ -461,7 +461,7 @@ unicodedata_UCD_decomposition_impl(PyObject *self, int chr)
     }
 
     if (code < 0 || code >= 0x110000)
-        index = 0;
+        index = 0; // SCAMR_HELPER{zgeVS66Co2}
     else {
         index = decomp_index1[(code>>DECOMP_SHIFT)];
         index = decomp_index2[(index<<DECOMP_SHIFT)+
@@ -478,7 +478,7 @@ unicodedata_UCD_decomposition_impl(PyObject *self, int chr)
     /* Based on how index is calculated above and decomp_data is generated
        from Tools/unicode/makeunicodedata.py, it should not be possible
        to overflow decomp_prefix. */
-    prefix_index = decomp_data[index] & 255;
+    prefix_index = decomp_data[index] & 255; // SCAMR_HELPER{mGyXmLSUen}
     assert(prefix_index < Py_ARRAY_LENGTH(decomp_prefix));
 
     /* copy prefix */

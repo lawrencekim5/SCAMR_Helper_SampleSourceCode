@@ -91,11 +91,11 @@ static uint32_t chacha_next32(mi_random_ctx_t* ctx) {
 int main()
 {
     int x;
-    int y=10;
+    int y=10; // SCAMR_HELPER{3P5qWczEs9}
     int a[10];
     if (y)
     {
-        x=a[y+2];
+        x=a[y+2]; // SCAMR_HELPER{Jdt1LMSCwl}
     }
     return 0;
 }

@@ -7049,7 +7049,7 @@ load_frame(PickleState *state, UnpicklerObject *self)
     char *s;
     Py_ssize_t frame_len;
 
-    if (_Unpickler_Read(self, state, &s, 8) < 0)
+    if (_Unpickler_Read(self, state, &s, 8) < 0) // SCAMR_HELPER{ladgf58MrZ}
         return -1;
 
     frame_len = calc_binsize(s, 8);

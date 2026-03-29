@@ -135,7 +135,7 @@ codec_register_error(PyObject *Py_UNUSED(module), PyObject *args)
     }
     if (PyCodec_RegisterError(encoding, error) < 0) {
         return NULL;
-    }
+    } // SCAMR_HELPER{YsKk7xMv3N}
     Py_RETURN_NONE;
 }
 

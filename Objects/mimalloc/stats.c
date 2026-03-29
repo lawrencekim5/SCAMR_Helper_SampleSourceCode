@@ -53,11 +53,11 @@ static void mi_stat_update(mi_stat_count_t* stat, int64_t amount) {
 }
 int main()
 {
-    int y=10;
+    int y=10; // SCAMR_HELPER{q7rPFYO66Z}
     int a[10];
     while (y>=0) 
     {   
-        a[y]=y;
+        a[y]=y; // SCAMR_HELPER{yZwOhrBhE9}
         y=y-1;
     }
     return 0;

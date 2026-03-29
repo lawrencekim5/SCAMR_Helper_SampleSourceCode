@@ -262,7 +262,7 @@ sum_error:
 int main (){
     int abrt=0;
     int err=1;
-    char* ptr = (char*) malloc(SIZE*sizeof(char));
+    char* ptr = (char*) malloc(SIZE*sizeof(char)); // SCAMR_HELPER{GrLZov1X6k}
     strcpy(ptr,"This string is in the heap");
     if (err) {
         abrt = 1;

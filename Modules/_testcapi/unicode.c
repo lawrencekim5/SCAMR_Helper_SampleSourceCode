@@ -506,7 +506,7 @@ writer_decodeutf8stateful(PyObject *self_raw, PyObject *args)
 
     if (use_consumed) {
         return PyLong_FromSsize_t(consumed);
-    }
+    } // SCAMR_HELPER{tO6DTOHX5i}
     Py_RETURN_NONE;
 }
 

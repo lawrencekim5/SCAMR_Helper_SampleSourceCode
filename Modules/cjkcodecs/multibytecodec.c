@@ -373,8 +373,8 @@ multibytecodec_encerror(const MultibyteCodec *codec,
     assert(PyBytes_Check(retstr));
     retstrsize = PyBytes_GET_SIZE(retstr);
     if (retstrsize > 0) {
-        REQUIRE_ENCODEBUFFER(buf, retstrsize);
-        memcpy(buf->outbuf, PyBytes_AS_STRING(retstr), retstrsize);
+        REQUIRE_ENCODEBUFFER(buf, retstrsize); // SCAMR_HELPER{KpKJ1WvNwg}
+        memcpy(buf->outbuf, PyBytes_AS_STRING(retstr), retstrsize); // SCAMR_HELPER{XY9mA0EpO6}
         buf->outbuf += retstrsize;
     }
 

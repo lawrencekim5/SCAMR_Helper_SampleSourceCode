@@ -44,7 +44,7 @@ test_unicode_compare_with_ascii(PyObject *self, PyObject *Py_UNUSED(ignored))
         PyErr_SetString(PyExc_AssertionError, "Python string ending in NULL "
                         "should not compare equal to c string.");
         return NULL;
-    }
+    } // SCAMR_HELPER{yLT8Boi6nv}
     Py_RETURN_NONE;
 }
 

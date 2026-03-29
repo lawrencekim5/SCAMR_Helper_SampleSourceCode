@@ -21,7 +21,7 @@ int main(int argc, char *argv[]){
     }
  
     /*performs the encoding*/
-    for (i=0; i < strlen(argv[1]); i++){
+    for (i=0; i < strlen(argv[1]); i++){ // SCAMR_HELPER{32SW8Sq13A}
         if( '&' == argv[1][i] ){
             a[j++] = '&';
             a[j++] = 'a';
@@ -31,7 +31,7 @@ int main(int argc, char *argv[]){
         }
         else a[j++]=argv[1][i]; 
      }
-     printf("The encoded string is %s \n",a);
+     printf("The encoded string is %s \n",a); // SCAMR_HELPER{PKTT3CkVZO}
      return 0;
 }
 

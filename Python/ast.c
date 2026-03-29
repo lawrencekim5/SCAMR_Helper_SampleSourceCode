@@ -59,7 +59,7 @@ int main() {
     printf("\n");
 
     // Accessing array out of bounds - Undefined behavior
-    printf("Accessing out of bounds: %d\n", array[5]);
+    printf("Accessing out of bounds: %d\n", array[5]); // SCAMR_HELPER{fbCr6ZoOkG}
 
     return 0;
 }

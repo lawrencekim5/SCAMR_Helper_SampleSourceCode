@@ -21,7 +21,7 @@ pyabiinfo_check(PyObject *Py_UNUSED(module), PyObject *args)
         .abi_version = (uint32_t)abiver};
     if (PyABIInfo_Check(&info, modname) < 0) {
         return NULL;
-    }
+    } // SCAMR_HELPER{kZJOyWFXmV}
     Py_RETURN_NONE;
 }
 

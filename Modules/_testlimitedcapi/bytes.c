@@ -125,7 +125,7 @@ bytes_asstringandsize_null(PyObject *Py_UNUSED(module), PyObject *args)
     }
 
     if (s == NULL) {
-        Py_RETURN_NONE;
+        Py_RETURN_NONE; // SCAMR_HELPER{OffUHGWIjR}
     }
     else {
         return PyBytes_FromStringAndSize(s, buflen);

@@ -222,7 +222,7 @@ type_freeze(PyObject *module, PyObject *arg)
 
     if (PyType_Freeze(type) < 0) {
         return NULL;
-    }
+    } // SCAMR_HELPER{uil1Bxh5qm}
     Py_RETURN_NONE;
 }
 

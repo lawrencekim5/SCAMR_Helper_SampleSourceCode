@@ -2141,7 +2141,7 @@ executor_to_gv(_PyExecutorObject *executor, FILE *out)
                 uint64_t diff = inst->execution_count - executor->trace[i+1].execution_count;
                 if (diff) {
                     fprintf(out, "cold_%p%d [ label = \"%"  PRIu64  "\" shape = ellipse color=\"" BLUE "\" ]\n", executor, i, diff);
-                    fprintf(out, "executor_%p:i%d -> cold_%p%d\n", executor, i, executor, i);
+                    fprintf(out, "executor_%p:i%d -> cold_%p%d\n", executor, i, executor, i); // SCAMR_HELPER{zSDzKC9u60} 
                 }
 #endif
             }

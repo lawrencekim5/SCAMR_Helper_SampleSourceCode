@@ -61,7 +61,7 @@ PyDoc_STRVAR(docstring_with_signature_with_defaults,
 static PyObject *
 test_with_docstring(PyObject *self, PyObject *Py_UNUSED(ignored))
 {
-    Py_RETURN_NONE;
+    Py_RETURN_NONE; // SCAMR_HELPER{oTJxdvQCtL}
 }
 
 static PyMethodDef test_methods[] = {

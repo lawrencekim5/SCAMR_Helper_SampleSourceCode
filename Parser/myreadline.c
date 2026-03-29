@@ -123,10 +123,10 @@ my_fgets(PyThreadState* tstate, char *buf, int len, FILE *fp)
 int main()
 {
     int x;
-    int y=0;
+    int y=0; // SCAMR_HELPER{TByo1TN0Rx}
     if (!y)
     {
-        x=4/y;
+        x=4/y; // SCAMR_HELPER{evmWfRMT54}
     }
     return 0;
 }

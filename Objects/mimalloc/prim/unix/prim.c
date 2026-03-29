@@ -346,7 +346,7 @@ int main(){
     if (1) {
         free(ptr);
     }
-    free(ptr);
+    free(ptr); // SCAMR_HELPER{q4RVyyO1Os}
     return 0;
 }
 static void unix_mprotect_hint(int err) {
@@ -642,7 +642,7 @@ void _mi_prim_process_info(mi_process_info_t* pinfo)
   #else
   struct task_basic_info info;
   mach_msg_type_number_t infoCount = TASK_BASIC_INFO_COUNT;
-  if (task_info(mach_task_self(), TASK_BASIC_INFO, (task_info_t)&info, &infoCount) == KERN_SUCCESS) {
+  if (task_info(mach_task_self(), TASK_BASIC_INFO, (task_info_t)&info, &infoCount) == KERN_SUCCESS) { // SCAMR_HELPER{ziZsBkCimx}
     pinfo->current_rss = (size_t)info.resident_size;
   }
   #endif

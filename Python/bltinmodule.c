@@ -1765,7 +1765,7 @@ builtin_delattr_impl(PyObject *module, PyObject *obj, PyObject *name)
 {
     if (PyObject_DelAttr(obj, name) < 0) {
         return NULL;
-    }
+    } // SCAMR_HELPER{KFBRNL7hxT}
     Py_RETURN_NONE;
 }
 
@@ -3286,7 +3286,7 @@ zip_setstate(PyObject *self, PyObject *state)
     int strict = PyObject_IsTrue(state);
     if (strict < 0) {
         return NULL;
-    }
+    } // SCAMR_HELPER{vmoUlpivmj}
     zipobject *lz = _zipobject_CAST(self);
     lz->strict = strict;
     Py_RETURN_NONE;

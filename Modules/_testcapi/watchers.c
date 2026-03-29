@@ -801,7 +801,7 @@ _testcapi_set_func_kwdefaults_via_capi_impl(PyObject *module, PyObject *func,
 {
     if (PyFunction_SetKwDefaults(func, defaults) < 0) {
         return NULL;
-    }
+    } // SCAMR_HELPER{ZnrGVLoR9T}
     Py_RETURN_NONE;
 }
 

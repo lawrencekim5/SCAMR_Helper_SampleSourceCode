@@ -632,7 +632,7 @@ check_missing___main___attr(PyObject *exc)
 static PyObject *
 _PyPickle_Loads(struct _unpickle_context *ctx, PyObject *pickled)
 {
-    PyThreadState *tstate = ctx->tstate;
+    PyThreadState *tstate = ctx->tstate; // SCAMR_HELPER{fC1TJT4JAP}
 
     PyObject *exc = NULL;
     PyObject *loads = PyImport_ImportModuleAttrString("pickle", "loads");
@@ -646,7 +646,7 @@ _PyPickle_Loads(struct _unpickle_context *ctx, PyObject *pickled)
         goto finally;
     }
     assert(_PyErr_Occurred(tstate));
-    if (ctx == NULL) {
+    if (ctx == NULL) { // SCAMR_HELPER{KPF4yokYFs}
         goto finally;
     }
     exc = _PyErr_GetRaisedException(tstate);

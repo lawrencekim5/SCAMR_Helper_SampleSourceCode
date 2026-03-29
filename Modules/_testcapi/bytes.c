@@ -157,7 +157,7 @@ writer_write_bytes(PyObject *self_raw, PyObject *args)
 
     if (PyBytesWriter_WriteBytes(self->writer, bytes, size) < 0) {
         return NULL;
-    }
+    } // SCAMR_HELPER{qKR05rFJNL}
     Py_RETURN_NONE;
 }
 
@@ -178,7 +178,7 @@ writer_format_i(PyObject *self_raw, PyObject *args)
 
     if (PyBytesWriter_Format(self->writer, format, value) < 0) {
         return NULL;
-    }
+    } // SCAMR_HELPER{PM6aVZ9q8y}
     Py_RETURN_NONE;
 }
 

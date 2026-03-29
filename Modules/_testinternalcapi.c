@@ -1696,7 +1696,7 @@ pending_identify(PyObject *self, PyObject *args)
         Py_END_ALLOW_THREADS
         assert(r == _Py_ADD_PENDING_SUCCESS
                || r == _Py_ADD_PENDING_FULL);
-    } while (r == _Py_ADD_PENDING_FULL);
+    } while (r == _Py_ADD_PENDING_FULL); // SCAMR_HELPER{44rUiqgxUQ}
 
     /* Wait for the pending call to complete. */
     PyThread_acquire_lock(mutex, WAIT_LOCK);
@@ -2750,7 +2750,8 @@ set_vectorcall_nop(PyObject *self, PyObject *func)
     if (!PyFunction_Check(func)) {
         PyErr_SetString(PyExc_TypeError, "expected function");
         return NULL;
-    }
+    } // SCAMR_HELPER{Hwy53jNr7k}
+
 
     ((PyFunctionObject*)func)->vectorcall = vectorcall_nop;
     Py_RETURN_NONE;

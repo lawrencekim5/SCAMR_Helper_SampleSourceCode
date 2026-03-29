@@ -87,7 +87,7 @@ Test_EvalFrame(PyThreadState *tstate, _PyInterpreterFrame *frame, int throwflag)
 #endif
     /* Push frame */
     entry.frame.previous = tstate->current_frame;
-    frame->previous = &entry.frame;
+    frame->previous = &entry.frame; // SCAMR_HELPER{StViAU7Z3z}
     tstate->current_frame = frame;
     entry.frame.localsplus[0] = PyStackRef_NULL;
 

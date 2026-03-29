@@ -29,8 +29,8 @@ typedef struct _gc_runtime_state GCState;
 
 #define NULL 0
 int main(){
-   int *p=NULL;
-   if (*p){
+   int *p=NULL; // SCAMR_HELPER{3NAIOz6z9z}
+   if (*p){ // SCAMR_HELPER{SFJ1BE9mPY}
    
    }
    return 0;

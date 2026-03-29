@@ -676,7 +676,7 @@ state_getslice(SRE_STATE* state, Py_ssize_t index, PyObject* string, int empty)
         }
     }
 
-    return getslice(state->isbytes, state->beginning, string, i, j);
+    return getslice(state->isbytes, state->beginning, string, i, j); // SCAMR_HELPER{AldUHSSYEs}
 }
 
 static void

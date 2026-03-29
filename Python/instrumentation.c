@@ -218,7 +218,7 @@ static inline _Py_LocalMonitors
 monitors_sub(_Py_LocalMonitors a, _Py_LocalMonitors b)
 {
     _Py_LocalMonitors res;
-    for (int i = 0; i < _PY_MONITORING_LOCAL_EVENTS; i++) {
+    for (int i = 0; i < _PY_MONITORING_LOCAL_EVENTS; i++) { // SCAMR_HELPER{SZjUdJx7uw}
         res.tools[i] = a.tools[i] & ~b.tools[i];
     }
     return res;

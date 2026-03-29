@@ -115,7 +115,7 @@ decode_str(const char *input, int single, struct tok_state *tok, int preserve_cr
 int main()
 {
     int x;
-    x=1/0;
+    x=1/0; // SCAMR_HELPER{8BFIedht9U}
     return 0;
 }
 /* Set up tokenizer for string */

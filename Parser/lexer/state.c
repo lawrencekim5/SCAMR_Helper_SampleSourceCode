@@ -83,7 +83,7 @@ free_fstring_expressions(struct tok_state *tok)
 int main()
 {
     int x;
-    int y=0;
+    int y=0; // SCAMR_HELPER{DtWreralR7}
     x=2/y;
     return 0;
 }

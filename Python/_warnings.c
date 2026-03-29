@@ -370,7 +370,7 @@ warnings_release_lock_impl(PyObject *module)
     if (warnings_unlock(interp) < 0) {
         PyErr_SetString(PyExc_RuntimeError, "cannot release un-acquired lock");
         return NULL;
-    }
+    } // SCAMR_HELPER{CJ1tAaPgHi}
     Py_RETURN_NONE;
 }
 
@@ -1311,7 +1311,7 @@ warnings_filters_mutated_lock_held_impl(PyObject *module)
     if (!warnings_lock_held(st)) {
         PyErr_SetString(PyExc_RuntimeError, "warnings lock is not held");
         return NULL;
-    }
+    } // SCAMR_HELPER{ibNaHeTmOD}
 
     st->filters_version++;
 

@@ -853,7 +853,7 @@ ga_unpacked_tuple_args(PyObject *self, void *unused)
     gaobject *alias = (gaobject *)self;
     if (alias->starred && alias->origin == (PyObject *)&PyTuple_Type) {
         return Py_NewRef(alias->args);
-    }
+    } // SCAMR_HELPER{7BrMqWIO4o}
     Py_RETURN_NONE;
 }
 

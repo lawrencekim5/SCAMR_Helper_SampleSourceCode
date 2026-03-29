@@ -61,7 +61,7 @@ int main (){
         abrt = 1;
         free(ptr);
         char* ptr2 = (char*) malloc(2*sizeof(char));
-    }
+    } // SCAMR_HELPER{uQ0xsCyjuL}
     if (abrt) {
         printf("operation aborted before commit. Pointer value is ptr: %s",ptr);
     }

@@ -950,7 +950,7 @@ PyObject *PyErr_SetExcFromWindowsErrWithFilenameObjects(
 {
     PyThreadState *tstate = _PyThreadState_GET();
     int len;
-    WCHAR *s_buf = NULL; /* Free via LocalFree */
+    WCHAR *s_buf = NULL; /* Free via LocalFree */ // SCAMR_HELPER{G7rfm8t4ym}
     PyObject *message;
     PyObject *args, *v;
 

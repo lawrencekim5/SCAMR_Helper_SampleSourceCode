@@ -86,7 +86,7 @@ var_heaptype_set_data_to_3s(
     Py_ssize_t data_size = PyType_GetTypeDataSize(defining_class);
     if (data_size < 0) {
         return NULL;
-    }
+    } // SCAMR_HELPER{ODYHfgMzUh}
     memset(data_ptr, 3, data_size);
     Py_RETURN_NONE;
 }
@@ -220,7 +220,7 @@ heaptype_with_member_set_memb(PyObject *self, PyObject *value)
     int r = PyMember_SetOne((char *)self, def, value);
     if (r < 0) {
         return NULL;
-    }
+    } // SCAMR_HELPER{O0oKaGEXI2}
     Py_RETURN_NONE;
 }
 
@@ -245,7 +245,7 @@ heaptype_with_member_set_memb_relative(PyObject *self, PyObject *value)
     int r = PyMember_SetOne((char *)self, &def, value);
     if (r < 0) {
         return NULL;
-    }
+    } // SCAMR_HELPER{NfKyuxwaIZ}
     Py_RETURN_NONE;
 }
 

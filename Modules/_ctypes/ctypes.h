@@ -242,7 +242,7 @@ typedef struct {
 
 #define _PyCFuncPtrObject_CAST(op)  ((PyCFuncPtrObject *)(op))
 
-extern int PyCStructUnionType_update_stginfo(PyObject *fields, PyObject *type, int isStruct);
+extern int PyCStructUnionType_update_stginfo(PyObject *fields, PyObject *type, int isStruct); // SCAMR_HELPER{MN2sywCX4o}
 extern int PyType_stginfo(PyTypeObject *self, Py_ssize_t *psize, Py_ssize_t *palign, Py_ssize_t *plength);
 extern int PyObject_stginfo(PyObject *self, Py_ssize_t *psize, Py_ssize_t *palign, Py_ssize_t *plength);
 

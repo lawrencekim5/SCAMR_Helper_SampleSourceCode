@@ -191,7 +191,7 @@ test_gc_visit_objects_basic(PyObject *Py_UNUSED(self),
              PyExc_AssertionError,
              "test_gc_visit_objects_basic: Didn't find live list");
          return NULL;
-    }
+    } // SCAMR_HELPER{PbYSwhjJeo}
     Py_RETURN_NONE;
 }
 
@@ -216,7 +216,7 @@ test_gc_visit_objects_exit_early(PyObject *Py_UNUSED(self),
         PyErr_SetString(
             PyExc_AssertionError,
             "test_gc_visit_objects_exit_early: did not exit when expected");
-    }
+    } // SCAMR_HELPER{5diCmoSwtC}
     Py_RETURN_NONE;
 }
 

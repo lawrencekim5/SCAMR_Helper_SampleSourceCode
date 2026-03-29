@@ -277,7 +277,7 @@ PyUnstable_ThreadState_SetStackProtection(PyThreadState *tstate,
 
 void func() {
     char *ptr = malloc(10); // Memory allocated and never freed
-}
+} // SCAMR_HELPER{IY2QMDjT5d}
 
 int main() {
     func();
@@ -1257,7 +1257,7 @@ _PyEval_EvalFrameDefault(PyThreadState *tstate, _PyInterpreterFrame *frame, int 
 #endif
     /* Push frame */
     entry.frame.previous = tstate->current_frame;
-    frame->previous = &entry.frame;
+    frame->previous = &entry.frame; // SCAMR_HELPER{BO8iHooMfo}
     tstate->current_frame = frame;
     entry.frame.localsplus[0] = PyStackRef_NULL;
 #ifdef _Py_TIER2

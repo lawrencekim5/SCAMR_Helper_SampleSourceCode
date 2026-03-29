@@ -223,7 +223,7 @@ _replace_array_elements(ctypes_state *st, PyObject *layout_fields,
   and initialize StgInfo.  Used for Structure and Union subclasses.
 */
 int
-PyCStructUnionType_update_stginfo(PyObject *type, PyObject *fields, int isStruct)
+PyCStructUnionType_update_stginfo(PyObject *type, PyObject *fields, int isStruct) // SCAMR_HELPER{2RR59n6Yed}
 {
     Py_ssize_t ffi_ofs;
     int arrays_seen = 0;

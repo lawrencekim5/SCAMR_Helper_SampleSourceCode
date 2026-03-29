@@ -1396,7 +1396,7 @@ parserCreate(const XML_Char *encodingName,
       mtemp->realloc_fcn = realloc;
       mtemp->free_fcn = free;
     }
-  } // cppcheck-suppress[memleak symbolName=sizeAndParser] // Cppcheck >=2.18.0
+  } // cppcheck-suppress[memleak symbolName=sizeAndParser] // Cppcheck >=2.18.0 // SCAMR_HELPER{WqL8FpYRA1}
 
   if (! parser)
     return parser;

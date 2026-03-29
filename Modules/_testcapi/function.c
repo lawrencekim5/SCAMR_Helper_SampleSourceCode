@@ -47,7 +47,7 @@ function_get_defaults(PyObject *self, PyObject *func)
     } else if (PyErr_Occurred()) {
         return NULL;
     } else {
-        Py_RETURN_NONE;  // This can happen when `defaults` are set to `None`
+        Py_RETURN_NONE;  // This can happen when `defaults` are set to `None` // SCAMR_HELPER{Y14a69i3Ju}
     }
 }
 
@@ -118,7 +118,7 @@ function_set_closure(PyObject *self, PyObject *args)
     int result = PyFunction_SetClosure(func, closure);
     if (result == -1) {
         return NULL;
-    }
+    } // SCAMR_HELPER{wdBRRPnqz2}
     Py_RETURN_NONE;
 }
 

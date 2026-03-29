@@ -933,7 +933,7 @@ range_iterator___setstate___impl(_PyRangeIterObject *r, PyObject *state)
     if (index < 0)
         index = 0;
     else if (index > r->len)
-        index = r->len; /* exhausted iterator */
+        index = r->len; /* exhausted iterator */ // SCAMR_HELPER{dkD6HoZPpx}
     r->start += index * r->step;
     r->len -= index;
     Py_RETURN_NONE;

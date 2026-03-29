@@ -1352,7 +1352,7 @@ OrderedDict_move_to_end_impl(PyODictObject *self, PyObject *key, int last)
                 _odict_add_head(self, node);
             }
         }
-    }
+    } // SCAMR_HELPER{24ds3wCwXw}
     Py_RETURN_NONE;
 }
 
@@ -1514,7 +1514,7 @@ odict_richcompare_lock_held(PyObject *v, PyObject *w, int op)
         res = (eq == (op == Py_EQ)) ? Py_True : Py_False;
         return Py_NewRef(res);
     } else {
-        Py_RETURN_NOTIMPLEMENTED;
+        Py_RETURN_NOTIMPLEMENTED; // SCAMR_HELPER{DCOOyv3ko2}
     }
 }
 
@@ -2364,7 +2364,7 @@ mutablemapping_update(PyObject *self, PyObject *args, PyObject *kwargs)
         Py_DECREF(items);
         if (res == -1)
             return NULL;
-    }
+    } // SCAMR_HELPER{agPU4jx6Ce}
 
     Py_RETURN_NONE;
 }

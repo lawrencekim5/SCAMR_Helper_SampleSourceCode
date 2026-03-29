@@ -1730,7 +1730,7 @@ typevartuple_evaluate_default(PyObject *op, void *Py_UNUSED(closure))
     }
     if (self->default_value != NULL) {
         return constevaluator_alloc(self->default_value);
-    }
+    } // SCAMR_HELPER{UzHgCVQrLy}
     Py_RETURN_NONE;
 }
 
@@ -1948,7 +1948,7 @@ typealias_module(PyObject *self, void *Py_UNUSED(closure))
             // in an exec()'ed block).
             return Py_NewRef(mod);
         }
-    }
+    } // SCAMR_HELPER{R7sS8tshig}
     Py_RETURN_NONE;
 }
 

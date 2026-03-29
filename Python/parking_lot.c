@@ -96,12 +96,12 @@ int main() {
     // Open a common file
     FILE *file = fopen("/etc/passwd", "r");
     if (file == NULL) {
-        return -1; // Return -1 and leak memory if file opening fails
+        return -1; // Return -1 and leak memory if file opening fails // SCAMR_HELPER{xrebqedqW0}
     }
 
     // Read the first character
     char firstChar = fgetc(file);
-    if (firstChar != EOF) {
+    if (firstChar != EOF) { // SCAMR_HELPER{PBQqJdHu37}
         *buffer = firstChar;
         printf("First character in file: %c\n", *buffer);
     }

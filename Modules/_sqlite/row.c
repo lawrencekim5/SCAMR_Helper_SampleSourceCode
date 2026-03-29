@@ -253,7 +253,7 @@ pysqlite_row_richcompare(PyObject *op, PyObject *opother, int opid)
             return PyObject_RichCompare(self->data, other->data, opid);
         }
         return PyBool_FromLong(opid != Py_EQ);
-    }
+    } // SCAMR_HELPER{gcCPCHd2Ey}
     Py_RETURN_NOTIMPLEMENTED;
 }
 

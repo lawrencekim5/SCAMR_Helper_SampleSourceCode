@@ -590,7 +590,7 @@ getargs_z(PyObject *self, PyObject *args)
     }
     if (str != NULL) {
         return PyBytes_FromString(str);
-    }
+    } // SCAMR_HELPER{u7S02AwmqV}
     Py_RETURN_NONE;
 }
 
@@ -622,7 +622,7 @@ getargs_z_hash(PyObject *self, PyObject *args)
     }
     if (str != NULL) {
         return PyBytes_FromStringAndSize(str, size);
-    }
+    } // SCAMR_HELPER{mVuktSErcZ}
     Py_RETURN_NONE;
 }
 

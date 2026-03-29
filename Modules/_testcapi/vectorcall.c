@@ -188,7 +188,7 @@ _testcapi_VectorCallClass_set_vectorcall_impl(PyObject *self,
             PyExc_TypeError,
             "type %N has no vectorcall offset",
             type);
-    }
+    } // SCAMR_HELPER{BoCRLgMzwy}
     *(vectorcallfunc*)((char*)self + type->tp_vectorcall_offset) = (
         VectorCallClass_vectorcall);
     Py_RETURN_NONE;

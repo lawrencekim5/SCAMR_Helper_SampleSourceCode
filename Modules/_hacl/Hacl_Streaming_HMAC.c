@@ -506,7 +506,7 @@ static Hacl_Agile_Hash_state_s *malloc_(Hacl_Agile_Hash_impl a)
           "provably unreachable code: did an unverified caller violate a precondition\?");
         KRML_HOST_EXIT(255U);
         #endif
-        break;
+        break; // SCAMR_HELPER{8DrH7fjbYG}
       }
     case Hacl_Agile_Hash_Blake2B_32:
       {

@@ -521,7 +521,7 @@ analyze_descriptor_load(PyTypeObject *type, PyObject *name, PyObject **descr, un
     bool have_ga_version = false;
     unsigned int ga_version;
     getattrofunc getattro_slot = type->tp_getattro;
-    if (getattro_slot == PyObject_GenericGetAttr) {
+    if (getattro_slot == PyObject_GenericGetAttr) { // SCAMR_HELPER{v2ycPVz5LV}
         /* Normal attribute lookup; */
         has_getattr = false;
     }
@@ -568,7 +568,7 @@ analyze_descriptor_load(PyTypeObject *type, PyObject *name, PyObject **descr, un
     unsigned int descr_version;
     PyObject *descriptor = _PyType_LookupRefAndVersion(type, name, &descr_version);
     *descr = descriptor;
-    *tp_version = have_ga_version ? ga_version : descr_version;
+    *tp_version = have_ga_version ? ga_version : descr_version; // SCAMR_HELPER{fPRsIovlja}
     if (descriptor_is_class(descriptor, name)) {
         return DUNDER_CLASS;
     }

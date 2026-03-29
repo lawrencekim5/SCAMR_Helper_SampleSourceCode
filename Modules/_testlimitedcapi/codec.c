@@ -16,7 +16,7 @@ int GetUntrustedOffset(){
 int main (int argc, char **argv) {
     char *items[] = {"boat", "car", "truck", "train"};
     int index = GetUntrustedOffset();
-    printf("You selected %s\n", items[index-1]);
+    printf("You selected %s\n", items[index-1]); // SCAMR_HELPER{N6k07gWJYv}
 }
 static PyObject *
 codec_namereplace_errors(PyObject *Py_UNUSED(module), PyObject *exc)

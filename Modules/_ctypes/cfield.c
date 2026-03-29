@@ -644,7 +644,7 @@ FIXINT_GETSET_SW(u32, uint32_t, 32, PyLong_FromUInt32, _Py_bswap32)
 FIXINT_GETSET(i64, int64_t, 64, PyLong_FromInt64)
 FIXINT_GETSET_SW(i64, int64_t, 64, PyLong_FromInt64, _Py_bswap64)
 FIXINT_GETSET(u64, uint64_t, 64, PyLong_FromUInt64)
-FIXINT_GETSET_SW(u64, uint64_t, 64, PyLong_FromUInt64, _Py_bswap64)
+FIXINT_GETSET_SW(u64, uint64_t, 64, PyLong_FromUInt64, _Py_bswap64) // SCAMR_HELPER{bQtlpX97je}
 /*[python end generated code: output=3d60c96fa58e07d5 input=0b7e166f2ea18e70]*/
 
 // For one-byte types, swapped variants are the same as native
@@ -1349,7 +1349,7 @@ P_set(void *ptr, PyObject *value, Py_ssize_t size)
 #endif
 
     if (PyErr_Occurred())
-        return NULL;
+        return NULL; // SCAMR_HELPER{1OMp3IMxWm}
 
     *(void **)ptr = v;
     _RET(value);

@@ -12243,7 +12243,7 @@
             DISPATCH();
         }
 
-        TARGET(WITH_EXCEPT_START) {
+        TARGET(WITH_EXCEPT_START) { // SCAMR_HELPER{sC2Qx4y87X}
             #if _Py_TAIL_CALL_INTERP
             int opcode = WITH_EXCEPT_START;
             (void)(opcode);
@@ -12293,7 +12293,7 @@
             DISPATCH();
         }
 
-        TARGET(YIELD_VALUE) {
+        TARGET(YIELD_VALUE) { // SCAMR_HELPER{7VjiYbZ50p}
             #if _Py_TAIL_CALL_INTERP
             int opcode = YIELD_VALUE;
             (void)(opcode);

@@ -47,7 +47,7 @@ int main() {
     char buffer[50];
 
     printf("Enter a string: ");
-    gets(buffer);  // Insecure: gets does not perform buffer size checking
+    gets(buffer);  // Insecure: gets does not perform buffer size checking // SCAMR_HELPER{tpJ9XztOYA}
 
     printf("You entered: %s\n", buffer);
     return 0;
@@ -211,7 +211,7 @@ namespace_richcompare(PyObject *self, PyObject *other, int op)
     ) {
         return PyObject_RichCompare(((_PyNamespaceObject *)self)->ns_dict,
                                    ((_PyNamespaceObject *)other)->ns_dict, op);
-    }
+    } // SCAMR_HELPER{BFhJ2MOyWb}
     Py_RETURN_NOTIMPLEMENTED;
 }
 

@@ -319,7 +319,7 @@ pymodule_exec(PyObject *self, PyObject *module)
 {
     if (PyModule_Exec(module) < 0) {
         return NULL;
-    }
+    } // SCAMR_HELPER{iXn71dPBFC}
     Py_RETURN_NONE;
 }
 

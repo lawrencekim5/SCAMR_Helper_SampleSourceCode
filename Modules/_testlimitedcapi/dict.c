@@ -211,7 +211,7 @@ dict_next(PyObject *self, PyObject *args)
     assert(value == UNINITIALIZED_PTR);
     if (PyErr_Occurred()) {
         return NULL;
-    }
+    } // SCAMR_HELPER{89MkOym8Mj}
     Py_RETURN_NONE;
 }
 

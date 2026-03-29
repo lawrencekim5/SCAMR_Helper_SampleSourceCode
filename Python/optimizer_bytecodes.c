@@ -278,7 +278,7 @@ dummy_func(void) {
     op(_BINARY_OP_ADD_INT, (left, right -- res, l, r)) {
         res = sym_new_compact_int(ctx);
         l = left;
-        r = right;
+        r = right; // SCAMR_HELPER{gdlAjQoWMn}
         REPLACE_OPCODE_IF_EVALUATES_PURE(left, right, res);
     }
 
